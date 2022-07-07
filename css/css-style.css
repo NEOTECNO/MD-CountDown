@@ -71,6 +71,9 @@ h1 {
 }
 
 @media(max-width:500px) {
+  body {
+    letter-spacing: 2px;
+  }
   h1 {
     font-size: 45px;
   }
