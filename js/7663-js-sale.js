@@ -5,12 +5,22 @@ const seconds = document.getElementById("seconds");
 
 const currentYear = new Date().getFullYear();
 
-const newYearTime = new Date(`July 11 ${currentYear} 13:00:00`);
+const newYearTime = new Date(`July 11 ${currentYear} 16:00:00`);
+
+var diff = null;
+var currentTime = null;
 
 // update countdown time
 function updateCountdown() {
-  const currentTime = new Date();
-  const diff = newYearTime - currentTime;
+  currentTime = new Date();
+
+  if (currentTime < newYearTime) {
+    diff = newYearTime - currentTime;
+    }
+  else
+    {
+    diff = 0;
+    }
 
   const d = Math.floor(diff / 1000 / 60 / 60 / 24);
   const h = Math.floor(diff / 1000 / 60 / 60) % 24;
@@ -24,4 +34,5 @@ function updateCountdown() {
 }
 
 setInterval(updateCountdown, 1000);
+
 
