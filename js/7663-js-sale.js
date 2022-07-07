@@ -5,7 +5,7 @@ const seconds = document.getElementById("seconds");
 
 const currentYear = new Date().getFullYear();
 
-const newYearTime = new Date(`July 11 ${currentYear} 16:00:00`);
+const newYearTime = new Date(`July 11 ${currentYear} 20:00:00`);
 
 var diff = null;
 var currentTime = null;
