@@ -74,8 +74,11 @@ h1 {
   h1 {
     font-size: 45px;
   }
+  h2 {
+    font-size: 20px;
+  }
   .time {
-    margin: 5px;
+    margin: 2px;
   }
   .time h2 {
     font-size: 12px;
