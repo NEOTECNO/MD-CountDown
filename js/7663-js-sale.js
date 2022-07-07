@@ -12,7 +12,7 @@ var currentTime = null;
 
 // update countdown time
 function updateCountdown() {
-  currentTime = new Date();
+  currentTime = new Date.getUTCDate();
 
   if (currentTime < newYearTime) {
     diff = newYearTime - currentTime;
