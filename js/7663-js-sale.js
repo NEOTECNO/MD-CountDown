@@ -6,7 +6,7 @@ const seconds = document.getElementById("seconds");
 const currentYear = new Date();
 var currentYearUTC = currentYear.getUTCFullYear();
 
-const launchDate = new Date(`July 11 ${currentYearUTC} 16:00:00`);
+const launchDate = new Date(`July 11 ${currentYearUTC} 15:00:00`);
 
 var diff = null;
 var currentTime = null;
