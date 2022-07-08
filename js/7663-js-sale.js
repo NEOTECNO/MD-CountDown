@@ -3,20 +3,22 @@ const hours = document.getElementById("hours");
 const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
 
-const currentYear = new Date();
-var currentYearUTC = currentYear.getUTCFullYear();
-
-const launchDate = new Date(`July 11 ${currentYearUTC} 15:00:00`);
+const currentYear = new Date().getUTCFullYear();
+const launchDate = new Date(`July 11 ${currentYear} 18:00:00`);
 
 var diff = null;
-var currentTime = null;
 
 // update countdown time
 function updateCountdown() {
-  currentTime = new Date();
-  var currentTimeUTC = Date.UTC(currentTime.getUTCFullYear(), currentTime.getUTCMonth(),
-  currentTime.getUTCDate(), currentTime.getUTCHours(),
-  currentTime.getUTCMinutes(), currentTime.getUTCSeconds());
+  const currentTime = new Date();
+  var currentTimeUTC = new Date(
+    currentTime.getUTCFullYear(),
+    currentTime.getUTCMonth(),
+    currentTime.getUTCDate(),
+    currentTime.getUTCHours(),
+    currentTime.getUTCMinutes(),
+    currentTime.getUTCSeconds(),
+  );
 
   if (currentTimeUTC < launchDate) {
     diff = launchDate - currentTimeUTC;
