@@ -3,16 +3,15 @@ const hours = document.getElementById("hours");
 const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
 
-const currentYear = new Date().getFullYear();
-
-const newYearTime = new Date(`July 11 ${currentYear} 20:00:00`);
+const currentYear = new Date().getUTCFullYear();
+const newYearTime = new Date(`July 11 ${currentYear} 16:00:00`);
 
 var diff = null;
 var currentTime = null;
 
 // update countdown time
 function updateCountdown() {
-  currentTime = new Date.getUTCDate();
+  currentTime = new Date();
 
   if (currentTime < newYearTime) {
     diff = newYearTime - currentTime;
