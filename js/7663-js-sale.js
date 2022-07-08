@@ -3,8 +3,10 @@ const hours = document.getElementById("hours");
 const minutes = document.getElementById("minutes");
 const seconds = document.getElementById("seconds");
 
-const currentYear = new Date().getUTCFullYear();
-const newYearTime = new Date(`July 11 ${currentYear} 16:00:00`);
+const currentYear = new Date();
+var currentYearUTC = currentYear.getUTCFullYear();
+
+const newYearTime = new Date(`July 11 ${currentYearUTC} 16:00:00`);
 
 var diff = null;
 var currentTime = null;
