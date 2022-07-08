@@ -6,7 +6,7 @@ const seconds = document.getElementById("seconds");
 const currentYear = new Date();
 var currentYearUTC = currentYear.getUTCFullYear();
 
-const newYearTime = new Date(`July 11 ${currentYearUTC} 16:00:00`);
+const launchDate = new Date(`July 11 ${currentYearUTC} 16:00:00`);
 
 var diff = null;
 var currentTime = null;
@@ -14,9 +14,12 @@ var currentTime = null;
 // update countdown time
 function updateCountdown() {
   currentTime = new Date();
+  var currentTimeUTC = Date.UTC(currentTime.getUTCFullYear(), currentTime.getUTCMonth(),
+  currentTime.getUTCDate(), currentTime.getUTCHours(),
+  currentTime.getUTCMinutes(), currentTime.getUTCSeconds());
 
-  if (currentTime < newYearTime) {
-    diff = newYearTime - currentTime;
+  if (currentTimeUTC < launchDate) {
+    diff = launchDate - currentTimeUTC;
     }
   else
     {
